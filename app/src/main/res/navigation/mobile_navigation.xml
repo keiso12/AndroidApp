@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="br.edu.up.app.ui.produto.PersonagensFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_lista_produtos" >
+        <action
+            android:id="@+id/action_nav_home_to_produtoFragment"
+            app:destination="@id/produtoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="br.edu.up.app.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="br.edu.up.app.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/produtoFragment"
+        android:name="br.edu.up.app.ui.produto.PersonagemFragment"
+        android:label="Cadastro de produtos"
+        tools:layout="@layout/fragment_produto" />
+</navigation>
