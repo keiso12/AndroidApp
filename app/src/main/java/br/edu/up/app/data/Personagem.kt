@@ -9,8 +9,8 @@ data class Personagem(
     var id: Int,
     var nome: String,
     var descricao: String = String(),
-    var forca: Int,
     var vida: Int,
+    var forca: Int,
     var defesa: Int,
 
 ) {

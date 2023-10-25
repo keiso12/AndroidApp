@@ -34,8 +34,8 @@ class PersonagensAdapter(
         val itemPersonagem = personagens[position]
 
         holder.txtNome.text = itemPersonagem.nome
-        holder.txtVida.text = itemPersonagem.vida.toString()
         holder.txtForca.text = itemPersonagem.forca.toString()
+        holder.txtVida.text = itemPersonagem.vida.toString()
         holder.txtDefesa.text = itemPersonagem.defesa.toString()
 
         //clique para editar item da lista

@@ -25,9 +25,9 @@ class PersonagemFragment : Fragment() {
         val personagem = viewModel.personagem
         binding.inputNome.setText(personagem.nome)
         binding.inputDescricao.setText(personagem.descricao)
-        binding.inputVida.setText(personagem.vida)
-        binding.inputForca.setText(personagem.forca)
-        binding.inputDefesa.setText(personagem.defesa)
+        binding.inputVida.setText(personagem.vida.toString())
+        binding.inputForca.setText(personagem.forca.toString())
+        binding.inputDefesa.setText(personagem.defesa.toString())
 
         binding.btnSalvar.setOnClickListener {
             val personagemSalvar = Personagem(
