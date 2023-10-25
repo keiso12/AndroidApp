@@ -35,7 +35,7 @@ class PersonagemViewModel
         this.personagem = personagem
     }
 
-    fun salvar() = viewModelScope.launch {
+    fun salvar(personagem: Personagem) = viewModelScope.launch {
         repository.salvar(personagem)
     }
 

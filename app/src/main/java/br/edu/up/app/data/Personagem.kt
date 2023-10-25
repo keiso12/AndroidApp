@@ -12,7 +12,9 @@ data class Personagem(
     var vida: Int,
     var forca: Int,
     var defesa: Int,
+    var vitorias: Int,
+    var derrotas: Int
 
 ) {
-    constructor() : this(0,"","",0,0,0)
+    constructor() : this(0,"","",0,0,0, 0,0)
 }

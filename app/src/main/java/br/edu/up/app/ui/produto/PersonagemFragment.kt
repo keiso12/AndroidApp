@@ -37,10 +37,10 @@ class PersonagemFragment : Fragment() {
                 binding.inputVida.text.toString().toInt(),
                 binding.inputForca.text.toString().toInt(),
                 binding.inputDefesa.text.toString().toInt(),
-
+                0,0
             )
             viewModel.personagem = personagemSalvar
-            viewModel.salvar()
+            viewModel.salvar(personagemSalvar)
             findNavController().popBackStack()
         }
 

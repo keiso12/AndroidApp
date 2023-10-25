@@ -37,6 +37,8 @@ class PersonagensAdapter(
         holder.txtForca.text = itemPersonagem.forca.toString()
         holder.txtVida.text = itemPersonagem.vida.toString()
         holder.txtDefesa.text = itemPersonagem.defesa.toString()
+        holder.txtVitorias.text = itemPersonagem.vitorias.toString()
+        holder.txtDerrotas.text = itemPersonagem.derrotas.toString()
 
         //clique para editar item da lista
         holder.itemView.setOnClickListener { view ->
@@ -70,7 +72,8 @@ class PersonagensAdapter(
         val txtVida: TextView = binding.txtVida
         val txtForca: TextView = binding.txtForca
         val txtDefesa: TextView = binding.txtDefesa
-
+        val txtVitorias: TextView = binding.txtVitorias
+        val txtDerrotas: TextView = binding.txtDerrotas
     }
 
 }
