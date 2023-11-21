@@ -32,6 +32,7 @@ class PersonagemFragment : Fragment() {
         binding.btnSalvar.setOnClickListener {
             val personagemSalvar = Personagem(
                 personagem.id,
+                personagem.docId,
                 binding.inputNome.text.toString(),
                 binding.inputDescricao.text.toString(),
                 binding.inputVida.text.toString().toInt(),

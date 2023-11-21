@@ -1,40 +1,19 @@
 package br.edu.up.app.data
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class PersonagemRepository
-    @Inject constructor(val personagemDAO: PersonagemDAO) {
 
-    val personagens: Flow<List<Personagem>> get() = personagemDAO.listar()
-    suspend fun salvar(personagem: Personagem) {
-        if (personagem.id == 0){
-            personagemDAO.inserir(personagem)
-        } else {
-            personagemDAO.atualizar(personagem)
-        }
-    }
-    suspend fun excluir(personagem: Personagem){
-        personagemDAO.excluir(personagem)
-    }
+interface PersonagemRepository{
 
-    suspend fun excluirTodos(){
-        personagemDAO.excluirTodos()
-    }
-
-//    init {
-//        CoroutineScope(Job()).launch {
-//
-//            produtoDAO.excluirTodos()
-//            delay(15000)
-//            val produtos = produtos()
-//            for(p in produtos){
-//                p.id = 0
-//                produtoDAO.inserir(p)
-//            }
-//        }
-//    }
-
+    val personagens: Flow<List<Personagem>>
+    suspend fun salvar(personagem: Personagem)
+    suspend fun excluir(personagem: Personagem)
+    suspend fun excluirTodos()
 
 
 }

@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 data class Personagem(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
+    var docId: String,
     var nome: String,
     var descricao: String = String(),
     var vida: Int,
@@ -16,5 +17,5 @@ data class Personagem(
     var derrotas: Int
 
 ) {
-    constructor() : this(0,"","",0,0,0, 0,0)
+    constructor() : this(0,"","","",0,0,0, 0,0)
 }
